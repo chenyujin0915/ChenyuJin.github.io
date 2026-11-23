@@ -1,40 +1,28 @@
+
 ---
 title: ""
 ---
 
-<div class="home-hero">
+:::: {.home-layout}
 
-<div class="home-photo">
-<img src="profile.jpg" alt="Chenyu Jin">
-</div>
+::: {.home-photo}
 
-<div class="home-intro">
+![](profile.jpg)
 
-<h1 class="home-name">Chenyu Jin, MPH</h1>
+:::
 
-<p class="home-subtitle">
-Biostatistics | Epidemiology | Population Health
-</p>
+::: {.home-intro}
 
-<div class="home-accent"></div>
+# Chenyu Jin, MPH
 
-<p>
-Welcome to my academic website!
-</p>
+*Biostatistics | Epidemiology | Population Health*
 
-<p>
-I am a public health researcher with a Master of Public Health
-(MPH) in Biostatistics and an Advanced Certificate in Epidemiology
-from Columbia University Mailman School of Public Health.
-I also hold a Bachelor of Science in Financial Mathematics
-from Xi'an Jiaotong-Liverpool University.
-</p>
+---
 
-<p>
-My research interests focus on survival analysis,
-statistical learning, and causal inference, particularly
-their applications in cancer epidemiology and population health.
+I am a public health researcher with an MPH degree in Biostatistics and an Advanced Certificate in Epidemiology from Columbia University Mailman School of Public Health. I also hold a BSc degree in Financial Mathematics from Xi’an Jiaotong-Liverpool University.
 
-</div>
+My research interests include survival analysis, statistical learning, and causal inference, with applications in cancer epidemiology and population health.
 
-</div>
+:::
+
+::::

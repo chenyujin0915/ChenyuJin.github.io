@@ -1,35 +1,48 @@
 
-/* ==========================================
-   CHENYU JIN ACADEMIC WEBSITE
+/* ==============================================
+   CHENYU JIN | ACADEMIC PERSONAL WEBSITE
    Modern Academic Editorial Theme
-   ========================================== */
+   ============================================== */
 
-/* ---------- GLOBAL STYLE ---------- */
-
-html {
-  background-color: #FAF9F6;
+:root {
+  --forest: #234b40;
+  --forest-light: #35695a;
+  --ivory: #faf9f6;
+  --charcoal: #303735;
+  --muted: #66776e;
+  --gold: #b99b69;
+  --rule: #dce1d9;
 }
 
-html body {
+/* ==============================================
+   1. GLOBAL STYLE
+   ============================================== */
+
+html,
+body {
+  background-color: var(--ivory) !important;
+}
+
+body {
+  margin: 0;
+  color: var(--charcoal);
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.85;
-  color: #303735;
-  background-color: #FAF9F6;
-  margin: 0;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ---------- NAVIGATION BAR ---------- */
+/* ==============================================
+   2. NAVIGATION BAR
+   ============================================== */
 
-.navbar,
-.navbar-inverse,
-.navbar-default {
-  background-color: #234B40 !important;
+body .navbar.navbar-inverse,
+body .navbar.navbar-default {
+  background-color: var(--forest) !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  min-height: 65px;
+  min-height: 64px;
   margin-bottom: 0;
 }
 
@@ -41,111 +54,115 @@ html body {
 
 .navbar-inverse .navbar-brand,
 .navbar-default .navbar-brand {
+  color: #ffffff !important;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
-  font-weight: 500;
-  color: #FFFFFF !important;
-  letter-spacing: 0.3px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .navbar-inverse .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #e9efeb !important;
+  background: transparent !important;
   font-size: 14px;
-  font-weight: 400;
-  color: #E9EFEB !important;
-  background-color: transparent !important;
   letter-spacing: 0.3px;
   transition: color 0.2s ease;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:hover {
-  color: #D9C49D !important;
-  background-color: transparent !important;
-}
-
+.navbar-default .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a {
-  color: #D9C49D !important;
-  background-color: transparent !important;
+  color: #e2ca9b !important;
+  background: transparent !important;
 }
+
+/* Mobile navigation */
 
 .navbar-inverse .navbar-toggle,
 .navbar-default .navbar-toggle {
-  border-color: rgba(255,255,255,0.35);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .navbar-inverse .navbar-toggle .icon-bar,
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-/* ---------- MAIN CONTENT ---------- */
+/* ==============================================
+   3. SHARED CONTENT AREA
+   ============================================== */
 
 html body .main-container {
+  box-sizing: border-box;
   width: 100% !important;
   max-width: 1000px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding: 55px 45px 90px !important;
-  background-color: transparent;
+  padding: 52px 42px 85px !important;
+  background: transparent;
 }
 
-/* ---------- TYPOGRAPHY ---------- */
+/* ==============================================
+   4. GLOBAL TYPOGRAPHY
+   ============================================== */
 
 .main-container h1,
 .main-container h2,
 .main-container h3,
 .main-container h4 {
+  color: var(--forest);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
-  color: #234B40;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .main-container h1 {
-  font-size: 38px;
-  margin-top: 15px;
-  margin-bottom: 28px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #D7DCD6;
+  font-size: 40px;
+  margin: 4px 0 22px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--rule);
 }
 
 .main-container h2 {
   font-size: 27px;
-  margin-top: 44px;
-  margin-bottom: 22px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #E3E5DF;
+  margin: 43px 0 23px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
 }
 
 .main-container h3 {
   font-size: 21px;
-  margin-top: 30px;
-  margin-bottom: 16px;
+  margin: 27px 0 10px;
 }
 
 .main-container p {
   font-size: 16px;
   line-height: 1.85;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
-/* ---------- LINKS ---------- */
+/* Links */
 
 .main-container a {
-  color: #35695A;
+  color: var(--forest-light);
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .main-container a:hover {
-  color: #A1814F;
+  color: #987747;
   text-decoration: underline;
 }
 
-/* ---------- LISTS ---------- */
+/* Images */
+
+.main-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Lists */
 
 .main-container ul,
 .main-container ol {
@@ -157,139 +174,298 @@ html body .main-container {
   margin-bottom: 8px;
 }
 
-/* ---------- BLOCKQUOTES ---------- */
+/* ==============================================
+   5. HOME PAGE: 40% PHOTO + 60% INTRODUCTION
+   ============================================== */
 
-.main-container blockquote {
-  background-color: #F1F2ED;
-  border-left: 3px solid #B99B69;
-  padding: 18px 25px;
-  margin: 28px 0;
-  color: #52615A;
+/* Wider content area for Home */
+
+html body .main-container:has(.home-layout) {
+  max-width: 1240px !important;
+  padding: 38px 46px !important;
 }
 
-/* ---------- TABLES ---------- */
+/* Two-column layout */
 
-.main-container table {
+.main-container .home-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 2fr) minmax(0, 3fr);
+
+  column-gap: 60px;
+  align-items: center;
+
+  min-height: calc(100vh - 160px);
+  min-height: calc(100svh - 160px);
+
   width: 100%;
-  border-collapse: collapse;
-  margin: 25px 0;
+  margin: 0 auto;
 }
 
-.main-container th {
-  background-color: #E9EDE8;
-  color: #234B40;
+/* ==============================================
+   6. HOME PROFILE PHOTO
+   ============================================== */
+
+.home-layout .home-photo {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.main-container th,
-.main-container td {
-  padding: 12px;
-  border-bottom: 1px solid #DDE2DB;
+/* Remove default Markdown image spacing */
+
+.home-layout .home-photo p,
+.home-layout .home-photo figure {
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------- GENERAL IMAGES ---------- */
+/* Hide image captions */
 
-.main-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+.home-layout .home-photo figcaption,
+.home-layout .home-photo .caption,
+.home-layout .home-photo p.caption {
+  display: none !important;
 }
 
-/* ==========================================
-   HOME PAGE HERO
-   ========================================== */
+/* Profile photo */
 
-.home-hero {
-  display: flex;
-  align-items: flex-start;
-  gap: 50px;
-  margin-top: 35px;
-  margin-bottom: 60px;
-}
-
-/* ---------- PROFILE PHOTO ---------- */
-
-.home-photo {
-  flex: 0 0 250px;
-  width: 250px;
-}
-
-.home-photo img {
+html body .main-container
+.home-layout .home-photo img {
   display: block;
-  width: 100%;
-  height: 320px;
+  float: none !important;
+
+  width: 100% !important;
+  height: auto !important;
+  max-height: 560px;
+
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
-  border-radius: 5px;
-  box-shadow: 0 4px 16px rgba(35,75,64,0.10);
+
+  margin: 0 !important;
+  padding: 0;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 10px 30px rgba(35, 75, 64, 0.09);
 }
 
-/* ---------- HOME INTRODUCTION ---------- */
+/* ==============================================
+   7. HOME INTRODUCTION
+   ============================================== */
 
-.home-intro {
-  flex: 1;
+.home-layout .home-intro {
+  width: 100%;
   min-width: 0;
+  padding: 0;
 }
 
-.main-container .home-intro .home-name {
+/* Large academic name */
+
+html body .main-container
+.home-layout .home-intro h1 {
   font-family: Georgia, "Times New Roman", serif;
-  color: #234B40;
-  font-size: 39px;
+
+  font-size: clamp(44px, 4.2vw, 66px);
   font-weight: 400;
-  line-height: 1.3;
-  margin-top: 0;
-  margin-bottom: 12px;
-  padding-bottom: 0;
-  border-bottom: none;
+  line-height: 1.13;
+  letter-spacing: -1px;
+
+  color: var(--forest);
+
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+
+  border: none !important;
 }
 
-/* ---------- SUBTITLE ---------- */
+/* Subtitle */
 
-.home-intro .home-subtitle {
+.home-layout .home-intro h1 + p {
+  margin: 0 !important;
+  padding: 0;
+}
+
+html body .main-container
+.home-layout .home-intro h1 + p em {
+  display: block;
+
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  color: #718579;
-  letter-spacing: 0.35px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: 1.65;
+  letter-spacing: 0.25px;
+
+  color: var(--muted);
+
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Gold divider */
+
+html body .main-container
+.home-layout .home-intro hr {
+  width: 78px;
+  height: 0;
+
+  border: none !important;
+  border-top: 3px solid var(--gold) !important;
+
+  margin: 26px 0 29px !important;
+}
+
+/* Introduction paragraphs */
+
+html body .main-container
+.home-layout .home-intro p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--charcoal);
+
   margin-bottom: 22px;
 }
 
-/* ---------- GOLD ACCENT ---------- */
-
-.home-accent {
-  width: 65px;
-  height: 2px;
-  background-color: #B99B69;
-  margin-bottom: 27px;
+html body .main-container
+.home-layout .home-intro p:last-child {
+  margin-bottom: 0;
 }
 
-/* ---------- BIOGRAPHY TEXT ---------- */
+/* ==============================================
+   8. ABOUT PAGE: EDUCATION
+   ============================================== */
 
-.home-intro p {
-  font-size: 16px;
-  line-height: 1.9;
-  color: #303735;
-  margin-bottom: 19px;
+/* Education entries */
+
+.main-container h3 + p {
+  border-left: 3px solid var(--gold);
+  padding-left: 18px;
 }
 
-/* ---------- SEPARATORS ---------- */
+/* Delta Omega emphasis */
 
-.main-container hr {
+.main-container strong {
+  color: var(--forest);
+  font-weight: 600;
+}
+
+/* ==============================================
+   9. ABOUT PAGE: PERSONAL PHOTO GALLERY
+   ============================================== */
+
+.main-container table {
+  width: 100%;
+  table-layout: fixed;
+
+  border-collapse: separate;
+  border-spacing: 14px 0;
+
+  margin: 24px 0 35px;
+}
+
+/* Table headings */
+
+.main-container table thead th {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+
+  color: var(--forest);
+  background: transparent;
+
+  text-align: center;
   border: none;
-  border-top: 1px solid #DADFD9;
-  margin: 38px 0;
+
+  padding: 12px 10px;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
+/* Table content */
 
-@media (max-width: 768px) {
+.main-container table td {
+  width: 50%;
+  padding: 10px 12px;
 
-  html body .main-container {
-    padding: 30px 22px 60px !important;
+  border: none;
+  vertical-align: top;
+
+  color: #58665f;
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: center;
+}
+
+/* Cat and cooking photos */
+
+.main-container table img {
+  display: block;
+  width: 100%;
+  height: 250px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 6px;
+}
+
+/* ==============================================
+   10. RESPONSIVE DESIGN: TABLET
+   ============================================== */
+
+@media (max-width: 900px) {
+
+  html body .main-container:has(.home-layout) {
+    padding: 34px 28px 65px !important;
   }
 
+  /* Stack photo above biography */
+
+  html body .main-container .home-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+
+    max-width: 690px;
+    min-height: 0;
+
+    margin: 0 auto;
+  }
+
+  /* Smaller portrait */
+
+  .home-layout .home-photo {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  html body .main-container
+  .home-layout .home-intro h1 {
+    font-size: clamp(39px, 6vw, 54px);
+  }
+}
+
+/* ==============================================
+   11. RESPONSIVE DESIGN: MOBILE
+   ============================================== */
+
+@media (max-width: 600px) {
+
+  html body .main-container {
+    padding: 30px 22px 56px !important;
+  }
+
+  html body .main-container:has(.home-layout) {
+    padding: 30px 22px 56px !important;
+  }
+
+  /* Shared headings */
+
   .main-container h1 {
-    font-size: 31px;
+    font-size: 32px;
   }
 
   .main-container h2 {
@@ -300,39 +476,52 @@ html body .main-container {
     font-size: 20px;
   }
 
-  .main-container p {
-    font-size: 15px;
-  }
+  /* Home layout */
 
-  .home-hero {
-    flex-direction: column;
-    align-items: center;
+  html body .main-container .home-layout {
+    grid-template-columns: 1fr;
     gap: 30px;
-    margin-top: 15px;
   }
 
-  .home-photo {
-    flex: none;
-    width: 210px;
+  .home-layout .home-photo {
+    max-width: 260px;
+    margin: 0 auto;
   }
 
-  .home-photo img {
-    height: 270px;
+  html body .main-container
+  .home-layout .home-intro h1 {
+    font-size: 40px;
+    letter-spacing: -0.4px;
   }
 
-  .home-intro {
-    width: 100%;
-  }
-
-  .main-container .home-intro .home-name {
-    font-size: 32px;
-  }
-
-  .home-intro .home-subtitle {
-    font-size: 13px;
-  }
-
-  .home-intro p {
+  html body .main-container
+  .home-layout .home-intro p {
     font-size: 15px;
+    line-height: 1.85;
+  }
+
+  html body .main-container
+  .home-layout .home-intro hr {
+    margin: 20px 0 25px !important;
+  }
+
+  /* About photo gallery */
+
+  .main-container table {
+    border-spacing: 4px 0;
+  }
+
+  .main-container table thead th {
+    font-size: 16px;
+    padding: 7px 4px;
+  }
+
+  .main-container table td {
+    font-size: 13px;
+    padding: 6px 4px;
+  }
+
+  .main-container table img {
+    height: 160px;
   }
 }

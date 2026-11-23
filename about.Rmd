@@ -1,3 +1,30 @@
+
 ---
-title: "About"
+title: ""
 ---
+
+# About Me
+
+My academic training combines financial mathematics, biostatistics, and epidemiology. Outside of research, I enjoy spending time with my cat and cooking for family and friends.
+
+## Education & Honors
+
+### Columbia University
+
+**Master of Public Health in Biostatistics**  
+Advanced Certificate in Epidemiology  
+2023–2025  
+**Delta Omega Honor Society Member**
+
+### Xi'an Jiaotong-Liverpool University
+
+**Bachelor of Science in Financial Mathematics**  
+First Class Degree  
+2019–2023
+
+## Life Beyond Research
+
+| My Cat | Cooking at Home |
+|:---:|:---:|
+| ![My pet cat](my-cat.jpg) | ![A homemade dish](my-cooking.jpg) |
+| Spending time with my cat is one of my favorite ways to relax. | I enjoy trying new recipes and preparing homemade meals for family and friends. |
