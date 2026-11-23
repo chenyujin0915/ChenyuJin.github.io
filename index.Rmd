@@ -1,8 +1,3 @@
 ---
-title: "Welcome to Chenyu Jin's personal website"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
-    theme: cerulean
+title: "Home"
 ---

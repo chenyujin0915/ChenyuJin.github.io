@@ -1,0 +1,181 @@
+
+/* ====================================
+   UNIFIED ACADEMIC WEBSITE STYLE
+   Home / About / All Pages
+   ==================================== */
+
+/* GLOBAL PAGE STYLE */
+html {
+  background: #FAF9F6;
+}
+
+html body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #303735;
+  background: #FAF9F6;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* GLOBAL NAVIGATION */
+body .navbar.navbar-inverse,
+body .navbar.navbar-default {
+  background: #234B40 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-bottom: 0;
+  min-height: 65px;
+}
+
+.navbar .navbar-brand,
+.navbar-inverse .navbar-brand,
+.navbar-default .navbar-brand {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: #FFFFFF !important;
+  letter-spacing: 0.3px;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #E9EFEB !important;
+  background: transparent !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a {
+  color: #D9C49D !important;
+  background: transparent !important;
+}
+
+/* UNIFIED CONTENT WIDTH */
+html body .main-container {
+  width: 100% !important;
+  max-width: 960px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 50px 40px 80px !important;
+  background: transparent;
+}
+
+/* HEADINGS */
+.main-container h1,
+.main-container h2,
+.main-container h3,
+.main-container h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #234B40;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.main-container h1 {
+  font-size: 38px;
+  margin-top: 15px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #D7DCD6;
+}
+
+.main-container h2 {
+  font-size: 27px;
+  margin-top: 44px;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E3E5DF;
+}
+
+.main-container h3 {
+  font-size: 21px;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+
+/* PARAGRAPHS */
+.main-container p {
+  font-size: 16px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+/* LINKS */
+.main-container a {
+  color: #35695A;
+  text-decoration: none;
+}
+
+.main-container a:hover {
+  color: #A1814F;
+  text-decoration: underline;
+}
+
+/* LISTS */
+.main-container ul,
+.main-container ol {
+  margin-bottom: 22px;
+  padding-left: 24px;
+}
+
+.main-container li {
+  margin-bottom: 8px;
+}
+
+/* QUOTES */
+.main-container blockquote {
+  background: #F1F2ED;
+  border-left: 3px solid #B99B69;
+  padding: 18px 25px;
+  color: #52615A;
+}
+
+/* TABLES */
+.main-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.main-container th {
+  background: #E9EDE8;
+  color: #234B40;
+}
+
+.main-container th,
+.main-container td {
+  padding: 12px;
+  border-bottom: 1px solid #DDE2DB;
+}
+
+/* IMAGES */
+.main-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  html body .main-container {
+    padding: 30px 20px 55px !important;
+  }
+
+  .main-container h1 {
+    font-size: 31px;
+  }
+
+  .main-container h2 {
+    font-size: 24px;
+  }
+
+  .main-container p {
+    font-size: 15px;
+  }
+}
