@@ -11,7 +11,7 @@
 
 
 
-<title>index.knit</title>
+<title>Chenyu Jin, MPH</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -30,8 +30,6 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -42,18 +40,9 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
 
 
 
@@ -278,14 +267,25 @@ $(document).ready(function () {
 </div>
 
 
-<div class="home-layout">
-<div class="home-photo">
-<p><img src="profile.JPG" /></p>
+<style>
+
+@media (min-width: 741px) {
+  .site-page.site-home {
+    min-height: calc(100vh - 60px);
+    min-height: calc(100svh - 60px);
+    padding-block: clamp(28px, 5vh, 56px);
+  }
+}
+</style>
+<div class="site-page site-home site-grid">
+<div class="site-portrait">
+<p><img src="profile.JPG" alt="Chenyu Jin" /></p>
 </div>
-<div id="chenyu-jin-mph" class="section level1 home-intro">
+<div class="site-bio">
+<div id="chenyu-jin-mph" class="site-heading">
 <h1>Chenyu Jin, MPH</h1>
-<p><em>Biostatistics | Epidemiology | Population Health</em></p>
-<hr />
+<p>Biostatistics | Epidemiology | Population Health</p>
+</div>
 <p>I am a public health researcher with an MPH degree in Biostatistics
 and an Advanced Certificate in Epidemiology from Columbia University
 Mailman School of Public Health. I also hold a BSc degree in Financial
@@ -331,15 +331,6 @@ $(document).ready(function () {
 <!-- code folding -->
 
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 </body>
 </html>

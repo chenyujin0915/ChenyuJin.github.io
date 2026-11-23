@@ -1,17 +1,14 @@
-
 name: "Chenyu Jin Academic Website"
 output_dir: "."
 
 navbar:
   title: "Chenyu Jin"
   type: inverse
-
   left:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-
   right:
     - icon: fa-envelope fa-lg
       href: mailto:chenyu.jin0915@gmail.com
@@ -21,7 +18,8 @@ navbar:
 output:
   html_document:
     theme: flatly
-    highlight: textmate
-    toc: false
-    number_sections: false
     css: styles.css
+    section_divs: false
+    fig_caption: false
+    mathjax: null
+    highlight: null

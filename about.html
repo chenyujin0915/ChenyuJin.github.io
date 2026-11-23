@@ -11,7 +11,7 @@
 
 
 
-<title>about.knit</title>
+<title>About Me</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -30,8 +30,6 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -42,18 +40,9 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
 
 
 
@@ -278,54 +267,66 @@ $(document).ready(function () {
 </div>
 
 
-<div id="about-me" class="section level1">
+<style>
+.site-page .site-intro {
+  margin: 0;
+  padding-inline-start: 1.25em;
+  list-style-type: disc;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.site-page .site-intro li + li {
+  margin-top: 4px;
+}
+</style>
+<div class="site-page">
+<div id="about-me" class="site-heading">
 <h1>About Me</h1>
-<p>My academic training combines financial mathematics, biostatistics,
-and epidemiology. Outside of research, I enjoy spending time with my cat
-and cooking for family and friends.</p>
-<div id="education-honors" class="section level2">
-<h2>Education &amp; Honors</h2>
-<div id="columbia-university" class="section level3">
+</div>
+<ul class="site-intro">
+<li>
+My academic training combines mathematics, biostatistics, and
+epidemiology.
+</li>
+<li>
+My research goal is to develop statistical methods to promote health
+equity.
+</li>
+<li>
+Outside of research, I enjoy spending time with my cat and cooking for
+family and friends.
+</li>
+</ul>
+<h2 id="education-honors">Education &amp; Honors</h2>
+<div class="site-grid">
+<div id="columbia-university" class="site-education">
 <h3>Columbia University</h3>
 <p><strong>Master of Public Health in Biostatistics</strong><br />
 Advanced Certificate in Epidemiology<br />
 2023–2025<br />
 <strong>Delta Omega Honor Society Member</strong></p>
 </div>
-<div id="xian-jiaotong-liverpool-university" class="section level3">
+<div id="xian-jiaotong-liverpool-university" class="site-education">
 <h3>Xi’an Jiaotong-Liverpool University</h3>
 <p><strong>Bachelor of Science in Financial Mathematics</strong><br />
 First Class Degree<br />
 2019–2023</p>
 </div>
 </div>
-<div id="life-beyond-research" class="section level2">
-<h2>Life Beyond Research</h2>
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">My Cat</th>
-<th align="center">Cooking at Home</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="my-cat.JPG" alt="My pet cat" /></td>
-<td align="center"><img src="my-cooking.JPG"
-alt="A homemade dish" /></td>
-</tr>
-<tr class="even">
-<td align="center">Spending time with my cat is one of my favorite ways
-to relax.</td>
-<td align="center">I enjoy trying new recipes and preparing homemade
-meals for family and friends.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="life-beyond-research">Life Beyond Research</h2>
+<div class="site-grid">
+<div id="my-cat" class="site-gallery-item">
+<h3>My Cat</h3>
+<p><img src="my-cat.JPG" alt="My pet cat" /></p>
+<p>Spending time with my cat is one of my favorite ways to relax.</p>
+</div>
+<div id="cooking-at-home" class="site-gallery-item">
+<h3>Cooking at Home</h3>
+<p><img src="my-cooking.JPG" alt="A homemade dish" /></p>
+<p>I enjoy trying new recipes and preparing homemade meals for family
+and friends.</p>
+</div>
 </div>
 </div>
 
@@ -364,15 +365,6 @@ $(document).ready(function () {
 <!-- code folding -->
 
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 </body>
 </html>

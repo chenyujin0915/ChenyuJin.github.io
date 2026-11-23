@@ -1,30 +1,76 @@
-
 ---
-title: ""
+pagetitle: "About Me"
 ---
 
+<style>
+.site-page .site-intro {
+  margin: 0;
+  padding-inline-start: 1.25em;
+  list-style-type: disc;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.site-page .site-intro li + li {
+  margin-top: 4px;
+}
+</style>
+
+::::: {.site-page}
+
+::: {.site-heading}
 # About Me
+:::
 
-My academic training combines financial mathematics, biostatistics, and epidemiology. Outside of research, I enjoy spending time with my cat and cooking for family and friends.
+<ul class="site-intro">
+  <li>My academic training combines mathematics, biostatistics, and epidemiology.</li>
+  <li>My research goal is to develop statistical methods to promote health equity.</li>
+  <li>Outside of research, I enjoy spending time with my cat and cooking for family and friends.</li>
+</ul>
 
 ## Education & Honors
 
+:::: {.site-grid}
+
+::: {.site-education}
 ### Columbia University
 
-**Master of Public Health in Biostatistics**  
-Advanced Certificate in Epidemiology  
-2023–2025  
+**Master of Public Health in Biostatistics**\
+Advanced Certificate in Epidemiology\
+2023–2025\
 **Delta Omega Honor Society Member**
+:::
 
+::: {.site-education}
 ### Xi'an Jiaotong-Liverpool University
 
-**Bachelor of Science in Financial Mathematics**  
-First Class Degree  
+**Bachelor of Science in Financial Mathematics**\
+First Class Degree\
 2019–2023
+:::
+
+::::
 
 ## Life Beyond Research
 
-| My Cat | Cooking at Home |
-|:---:|:---:|
-| ![My pet cat](my-cat.jpg) | ![A homemade dish](my-cooking.jpg) |
-| Spending time with my cat is one of my favorite ways to relax. | I enjoy trying new recipes and preparing homemade meals for family and friends. |
+:::: {.site-grid}
+
+::: {.site-gallery-item}
+### My Cat
+
+![My pet cat](my-cat.jpg)
+
+Spending time with my cat is one of my favorite ways to relax.
+:::
+
+::: {.site-gallery-item}
+### Cooking at Home
+
+![A homemade dish](my-cooking.jpg)
+
+I enjoy trying new recipes and preparing homemade meals for family and friends.
+:::
+
+::::
+
+:::::

@@ -1,527 +1,205 @@
-
-/* ==============================================
-   CHENYU JIN | ACADEMIC PERSONAL WEBSITE
-   Modern Academic Editorial Theme
-   ============================================== */
-
+/* Shared palette, typography, and spacing */
 :root {
-  --forest: #234b40;
-  --forest-light: #35695a;
-  --ivory: #faf9f6;
-  --charcoal: #303735;
-  --muted: #66776e;
-  --gold: #b99b69;
-  --rule: #dce1d9;
-}
-
-/* ==============================================
-   1. GLOBAL STYLE
-   ============================================== */
-
-html,
-body {
-  background-color: var(--ivory) !important;
+  --site-paper: #faf9f5;
+  --site-surface: #fffefb;
+  --site-forest: #234438;
+  --site-ink: #2f3833;
+  --site-muted: #54665c;
+  --site-accent: #ab8650;
+  --site-nav-accent: #f0d7a7;
+  --site-rule: #dfdfd5;
+  --site-serif: Georgia, "Times New Roman", serif;
+  --site-sans: "Helvetica Neue", Arial, sans-serif;
+  --site-width: 1120px;
+  --site-gutter: clamp(20px, 5vw, 48px);
+  --site-radius: 8px;
 }
 
 body {
-  margin: 0;
-  color: var(--charcoal);
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--site-paper);
+  color: var(--site-ink);
+  font-family: var(--site-sans);
   font-size: 16px;
-  line-height: 1.85;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.75;
 }
 
-/* ==============================================
-   2. NAVIGATION BAR
-   ============================================== */
-
-body .navbar.navbar-inverse,
-body .navbar.navbar-default {
-  background-color: var(--forest) !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  min-height: 64px;
-  margin-bottom: 0;
+/* Align the R Markdown navigation and page content */
+.navbar.navbar-inverse {
+  background: var(--site-forest);
+  border: 0;
+  box-shadow: 0 1px 0 rgba(35, 68, 56, 0.18);
 }
 
 .navbar .container,
-.navbar .container-fluid {
-  padding-top: 7px;
-  padding-bottom: 7px;
+.site-page {
+  width: 100%;
+  max-width: var(--site-width);
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
 }
 
-.navbar-inverse .navbar-brand,
-.navbar-default .navbar-brand {
-  color: #ffffff !important;
-  font-family: Georgia, "Times New Roman", serif;
+.navbar-inverse .navbar-brand {
+  color: var(--site-surface);
+  font-family: var(--site-serif);
   font-size: 22px;
-  font-weight: 400;
 }
 
-.navbar-inverse .navbar-nav > li > a,
-.navbar-default .navbar-nav > li > a {
-  color: #e9efeb !important;
-  background: transparent !important;
+.navbar-inverse .navbar-nav > li > a {
+  color: #edf2ed;
   font-size: 14px;
-  letter-spacing: 0.3px;
-  transition: color 0.2s ease;
 }
 
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus,
 .navbar-inverse .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a {
-  color: #e2ca9b !important;
-  background: transparent !important;
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: var(--site-nav-accent);
+  background: rgba(255, 255, 255, 0.06);
 }
 
-/* Mobile navigation */
-
-.navbar-inverse .navbar-toggle,
-.navbar-default .navbar-toggle {
-  border-color: rgba(255, 255, 255, 0.35);
+.navbar-inverse .navbar-toggle {
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
-.navbar-inverse .navbar-toggle .icon-bar,
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #ffffff;
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background: rgba(255, 255, 255, 0.12);
 }
 
-/* ==============================================
-   3. SHARED CONTENT AREA
-   ============================================== */
-
-html body .main-container {
-  box-sizing: border-box;
-  width: 100% !important;
-  max-width: 1000px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding: 52px 42px 85px !important;
-  background: transparent;
+.navbar :focus-visible {
+  outline: 2px solid var(--site-nav-accent);
+  outline-offset: -4px;
 }
 
-/* ==============================================
-   4. GLOBAL TYPOGRAPHY
-   ============================================== */
+.container-fluid.main-container {
+  max-width: none;
+  padding-inline: 0;
+}
 
-.main-container h1,
-.main-container h2,
-.main-container h3,
-.main-container h4 {
-  color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
+.site-page {
+  padding-block: clamp(36px, 6vw, 76px) clamp(48px, 7vw, 88px);
+}
+
+.site-page :is(h1, h2, h3) {
+  color: var(--site-forest);
+  font-family: var(--site-serif);
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.18;
 }
 
-.main-container h1 {
-  font-size: 40px;
-  margin: 4px 0 22px;
-  padding-bottom: 17px;
-  border-bottom: 1px solid var(--rule);
+.site-page h1 {
+  margin: 0;
+  font-size: clamp(38px, 5.3vw, 58px);
+  letter-spacing: -0.025em;
 }
 
-.main-container h2 {
-  font-size: 27px;
-  margin: 43px 0 23px;
+.site-page h2 {
+  margin: clamp(42px, 6vw, 64px) 0 24px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--site-rule);
+  font-size: clamp(26px, 3.4vw, 34px);
 }
 
-.main-container h3 {
-  font-size: 21px;
-  margin: 27px 0 10px;
+.site-page h3 {
+  margin: 0 0 10px;
+  font-size: clamp(21px, 2.5vw, 25px);
 }
 
-.main-container p {
-  font-size: 16px;
-  line-height: 1.85;
-  margin-bottom: 19px;
+.site-page p {
+  max-width: 68ch;
+  margin: 0 0 16px;
 }
 
-/* Links */
-
-.main-container a {
-  color: var(--forest-light);
-  text-decoration: none;
-}
-
-.main-container a:hover {
-  color: #987747;
-  text-decoration: underline;
-}
-
-/* Images */
-
-.main-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Lists */
-
-.main-container ul,
-.main-container ol {
-  padding-left: 24px;
-  margin-bottom: 22px;
-}
-
-.main-container li {
-  margin-bottom: 8px;
-}
-
-/* ==============================================
-   5. HOME PAGE: 40% PHOTO + 60% INTRODUCTION
-   ============================================== */
-
-/* Wider content area for Home */
-
-html body .main-container:has(.home-layout) {
-  max-width: 1240px !important;
-  padding: 38px 46px !important;
-}
-
-/* Two-column layout */
-
-.main-container .home-layout {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 2fr) minmax(0, 3fr);
-
-  column-gap: 60px;
-  align-items: center;
-
-  min-height: calc(100vh - 160px);
-  min-height: calc(100svh - 160px);
-
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* ==============================================
-   6. HOME PROFILE PHOTO
-   ============================================== */
-
-.home-layout .home-photo {
-  width: 100%;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove default Markdown image spacing */
-
-.home-layout .home-photo p,
-.home-layout .home-photo figure {
-  margin: 0;
-  padding: 0;
-}
-
-/* Hide image captions */
-
-.home-layout .home-photo figcaption,
-.home-layout .home-photo .caption,
-.home-layout .home-photo p.caption {
-  display: none !important;
-}
-
-/* Profile photo */
-
-html body .main-container
-.home-layout .home-photo img {
-  display: block;
-  float: none !important;
-
-  width: 100% !important;
-  height: auto !important;
-  max-height: 560px;
-
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
-
-  margin: 0 !important;
-  padding: 0;
-
-  border-radius: 8px;
-
-  box-shadow:
-    0 10px 30px rgba(35, 75, 64, 0.09);
-}
-
-/* ==============================================
-   7. HOME INTRODUCTION
-   ============================================== */
-
-.home-layout .home-intro {
-  width: 100%;
-  min-width: 0;
-  padding: 0;
-}
-
-/* Large academic name */
-
-html body .main-container
-.home-layout .home-intro h1 {
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(44px, 4.2vw, 66px);
-  font-weight: 400;
-  line-height: 1.13;
-  letter-spacing: -1px;
-
-  color: var(--forest);
-
-  margin: 0 0 20px !important;
-  padding: 0 !important;
-
-  border: none !important;
-}
-
-/* Subtitle */
-
-.home-layout .home-intro h1 + p {
-  margin: 0 !important;
-  padding: 0;
-}
-
-html body .main-container
-.home-layout .home-intro h1 + p em {
-  display: block;
-
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-
-  line-height: 1.65;
-  letter-spacing: 0.25px;
-
-  color: var(--muted);
-
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Gold divider */
-
-html body .main-container
-.home-layout .home-intro hr {
-  width: 78px;
-  height: 0;
-
-  border: none !important;
-  border-top: 3px solid var(--gold) !important;
-
-  margin: 26px 0 29px !important;
-}
-
-/* Introduction paragraphs */
-
-html body .main-container
-.home-layout .home-intro p {
-  font-size: 16px;
-  line-height: 1.9;
-  color: var(--charcoal);
-
-  margin-bottom: 22px;
-}
-
-html body .main-container
-.home-layout .home-intro p:last-child {
+.site-page p:last-child {
   margin-bottom: 0;
 }
 
-/* ==============================================
-   8. ABOUT PAGE: EDUCATION
-   ============================================== */
-
-/* Education entries */
-
-.main-container h3 + p {
-  border-left: 3px solid var(--gold);
-  padding-left: 18px;
-}
-
-/* Delta Omega emphasis */
-
-.main-container strong {
-  color: var(--forest);
+.site-page strong {
+  color: var(--site-forest);
   font-weight: 600;
 }
 
-/* ==============================================
-   9. ABOUT PAGE: PERSONAL PHOTO GALLERY
-   ============================================== */
-
-.main-container table {
-  width: 100%;
-  table-layout: fixed;
-
-  border-collapse: separate;
-  border-spacing: 14px 0;
-
-  margin: 24px 0 35px;
+.site-heading {
+  margin-bottom: 24px;
 }
 
-/* Table headings */
-
-.main-container table thead th {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 20px;
-  font-weight: 400;
-
-  color: var(--forest);
-  background: transparent;
-
-  text-align: center;
-  border: none;
-
-  padding: 12px 10px;
+.site-heading::after {
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-top: 20px;
+  background: var(--site-accent);
+  content: "";
 }
 
-/* Table content */
-
-.main-container table td {
-  width: 50%;
-  padding: 10px 12px;
-
-  border: none;
-  vertical-align: top;
-
-  color: #58665f;
-  font-size: 15px;
-  line-height: 1.75;
-  text-align: center;
+.site-heading p {
+  margin-top: 12px;
+  color: var(--site-muted);
 }
 
-/* Cat and cooking photos */
+/* Shared two-column layout for the biography, education, and gallery */
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 32px);
+}
 
-.main-container table img {
+.site-page img {
   display: block;
   width: 100%;
-  height: 250px;
-
+  height: auto;
   object-fit: cover;
-  object-position: center;
-
-  border-radius: 6px;
+  border-radius: var(--site-radius);
 }
 
-/* ==============================================
-   10. RESPONSIVE DESIGN: TABLET
-   ============================================== */
-
-@media (max-width: 900px) {
-
-  html body .main-container:has(.home-layout) {
-    padding: 34px 28px 65px !important;
-  }
-
-  /* Stack photo above biography */
-
-  html body .main-container .home-layout {
-    grid-template-columns: 1fr;
-    gap: 36px;
-
-    max-width: 690px;
-    min-height: 0;
-
-    margin: 0 auto;
-  }
-
-  /* Smaller portrait */
-
-  .home-layout .home-photo {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  html body .main-container
-  .home-layout .home-intro h1 {
-    font-size: clamp(39px, 6vw, 54px);
-  }
+/* Home */
+.site-home {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 72px);
 }
 
-/* ==============================================
-   11. RESPONSIVE DESIGN: MOBILE
-   ============================================== */
+.site-bio h1 {
+  font-size: clamp(40px, 6vw, 68px);
+}
 
-@media (max-width: 600px) {
+.site-portrait img {
+  aspect-ratio: 4 / 5;
+  object-position: center top;
+  box-shadow: 0 12px 32px rgba(35, 68, 56, 0.12);
+}
 
-  html body .main-container {
-    padding: 30px 22px 56px !important;
+/* About */
+.site-education {
+  padding-left: 16px;
+  border-left: 2px solid var(--site-accent);
+}
+
+.site-gallery-item {
+  padding: clamp(14px, 2vw, 22px);
+  border: 1px solid var(--site-rule);
+  border-radius: var(--site-radius);
+  background: var(--site-surface);
+}
+
+.site-gallery-item img {
+  aspect-ratio: 3 / 2;
+}
+
+.site-gallery-item p:last-child {
+  color: var(--site-muted);
+}
+
+@media (max-width: 740px) {
+  .site-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  html body .main-container:has(.home-layout) {
-    padding: 30px 22px 56px !important;
-  }
-
-  /* Shared headings */
-
-  .main-container h1 {
-    font-size: 32px;
-  }
-
-  .main-container h2 {
-    font-size: 24px;
-  }
-
-  .main-container h3 {
-    font-size: 20px;
-  }
-
-  /* Home layout */
-
-  html body .main-container .home-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .home-layout .home-photo {
-    max-width: 260px;
-    margin: 0 auto;
-  }
-
-  html body .main-container
-  .home-layout .home-intro h1 {
-    font-size: 40px;
-    letter-spacing: -0.4px;
-  }
-
-  html body .main-container
-  .home-layout .home-intro p {
-    font-size: 15px;
-    line-height: 1.85;
-  }
-
-  html body .main-container
-  .home-layout .home-intro hr {
-    margin: 20px 0 25px !important;
-  }
-
-  /* About photo gallery */
-
-  .main-container table {
-    border-spacing: 4px 0;
-  }
-
-  .main-container table thead th {
-    font-size: 16px;
-    padding: 7px 4px;
-  }
-
-  .main-container table td {
-    font-size: 13px;
-    padding: 6px 4px;
-  }
-
-  .main-container table img {
-    height: 160px;
+  .site-portrait {
+    width: min(100%, 320px);
+    justify-self: center;
   }
 }
