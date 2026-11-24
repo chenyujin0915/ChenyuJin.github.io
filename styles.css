@@ -23,7 +23,7 @@ body {
   line-height: 1.75;
 }
 
-/* Align the R Markdown navigation and page content */
+/* Navigation */
 .navbar.navbar-inverse {
   background: var(--site-forest);
   border: 0;
@@ -74,6 +74,7 @@ body {
   outline-offset: -4px;
 }
 
+/* Shared page layout */
 .container-fluid.main-container {
   max-width: none;
   padding-inline: 0;
@@ -140,7 +141,6 @@ body {
   color: var(--site-muted);
 }
 
-/* Shared two-column layout for the biography, education, and gallery */
 .site-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -193,6 +193,54 @@ body {
   color: var(--site-muted);
 }
 
+/* Research */
+.site-research-overview {
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.site-research-overview p {
+  max-width: none;
+  font-family: var(--site-serif);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+}
+
+.site-research-grid {
+  row-gap: clamp(32px, 5vw, 52px);
+}
+
+.site-research-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: var(--site-radius);
+  background: #dce5d9;
+}
+
+.site-research-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.site-research-theme h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0;
+  font-size: clamp(23px, 2.8vw, 33px);
+}
+
+.site-research-theme p {
+  max-width: none;
+  line-height: 1.65;
+}
+
+/* Mobile layout */
 @media (max-width: 740px) {
   .site-grid {
     grid-template-columns: minmax(0, 1fr);

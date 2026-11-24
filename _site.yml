@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Research"
+      href: research.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:chenyu.jin0915@gmail.com
